@@ -29,15 +29,18 @@
 			"network_card":			"vmxnet3",
 			"notes":			"vmNotes",
 
+			"ssh_username":			"root",
+			"ssh_private_key_file":		"sshFolder/sshKey",
+
 
 			"iso_checksum_type":		"sha256",
-			"iso_paths":			[""],
-			"iso_checksum":			"",
-			"floppy_files":			[""],
+			"iso_paths":			["isoPath"],
+			"iso_checksum":			"isoChecksum",
+			"floppy_files":			["{{ksDir/ksFile}}"],
 
 			"boot_command": [
 				"<esc><wait>",
-				"linux inst.ks=http://",
+				"linux inst.ks=hd:/fd0:/{ksFile}",
 				"<enter>"
 			]
 
