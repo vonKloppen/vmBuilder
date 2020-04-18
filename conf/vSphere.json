@@ -1,0 +1,6 @@
+{
+	"vcenter_server":          "",
+	"username":                "",
+	"password":                "",
+	"insecure_connection":     "true"
+}

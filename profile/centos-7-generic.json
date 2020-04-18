@@ -1,0 +1,56 @@
+{
+	"builders": [
+		{
+			"type":				"vsphere-iso",
+
+			"datacenter":			"vsDatacenter",
+			"cluster":			"vsCluster",
+			"host":				"vsHost",
+			"datastore":			"vsDatastor",
+			"folder":			"vsFolder",
+
+
+			"vm_name":			"vmName",
+			"guest_os_type":		"centos7_64Guest",
+			"firmware":			"bios",
+
+			"CPUs":				"vmCPU",
+			"cpu_cores":			"vmCPU",
+			"CPU_hot_plug":			"true",
+
+			"RAM":				"vmRAM",
+			"RAM_hot_plug":			"true",
+
+			"disk_size":			"vmDisk",
+			"disk_controller_type":		"pvscsi",
+			"disk_thin_provisioned":	"true",
+
+			"network":			"vmVlan",
+			"network_card":			"vmxnet3",
+			"notes":			"vmNotes",
+
+
+			"iso_checksum_type":		"sha256",
+			"iso_paths":			[""],
+			"iso_checksum":			"",
+			"floppy_files":			[""],
+
+			"boot_command": [
+				"<esc><wait>",
+				"linux inst.ks=http://",
+				"<enter>"
+			]
+
+		}
+
+	],
+
+	"provisioners": [
+		{
+
+
+		}
+	]
+
+
+}
