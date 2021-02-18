@@ -7,7 +7,7 @@ def title():
     
     print ('''\033[1;33;40m
 VM machine builder script
-CopyLeft by Mariusz Nowacki
+CopyLeft by Marian
     ''')
     return
 
